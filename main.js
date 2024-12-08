@@ -11,16 +11,16 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }).then((data) => {
         let date = new Date();
         let day = date.getUTCDate();
-        let month = date.getUTCMonth();
+        // why are months 0 indext, i spent way too much time on this
+        let month = date.getUTCMonth() + 1;
         let year = date.getUTCFullYear();
         let date_str = day + '-' + month + '-' + year;
+        clips = data[date_str];
+
         console.log(date_str);
-
-        let data_json = JSON.parse({data});
-        clips = data_json[date_str];
-
-        console.log(data_json);
+        console.log(data);
         console.log(clips);
+
         nextClip();
     }).catch((error) => {
         console.error("Unable to fetch data:", error);
