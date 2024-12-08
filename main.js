@@ -9,17 +9,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
         }
         return res.json();
     }).then((data) => {
-        let date = new Date();
-        let day = date.getUTCDate();
-        // why are months 0 indexed, i spent way too much time on this
-        let month = date.getUTCMonth() + 1;
-        let year = date.getUTCFullYear();
-        let date_str = day + "-" + month + "-" + year;
-        clips = data[date_str];
+        let dates = Object.getOwnPropertyNames(data);
+        clips = data[dates[0]];
 
-        console.log(date_str);
-        console.log(data);
-        console.log(clips);
+        document.querySelector('.date').innerHTML = dates[0];
 
         nextClip();
     }).catch((error) => {

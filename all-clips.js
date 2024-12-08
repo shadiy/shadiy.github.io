@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
         return res.json();
     }).then((data) => {
         let div = document.querySelector('.clips');
-        for (i = 0; i < data.length; i++) {
-            let clips = days[i];
-            div.innerHTML += Object.getOwnPropertyNames(clips)[0];
+        let dates = Object.getOwnPropertyNames(data);
+        for (i = 0; i < length; i++) {
+            let clips = data[dates[i]];
+            div.innerHTML += dates[i];
             for (x = 0; x < clips.length; x++) {
                 let clip_slug = clips[x];
     

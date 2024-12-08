@@ -6,6 +6,12 @@ body, html {
     font-family: 'Courier New', Courier, monospace;
 }
 
+p {
+    margin: 0;
+    padding: 1%;
+    height: 10%;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -37,7 +43,7 @@ li a:hover {
 
 .clip {
     width: 80%;
-    height: 90vh;
+    height: 80vh;
 }
 
 .controls button {
