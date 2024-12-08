@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
         let date_str = day + '-' + month + '-' + year;
         console.log(date_str);
 
-        let data_json = JSON.parse(data);
+        let data_json = JSON.parse({data});
         clips = data_json[date_str];
-        
+
         console.log(data_json);
         console.log(clips);
         nextClip();
