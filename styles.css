@@ -6,7 +6,6 @@ body, html {
 }
 
 ul {
-    height: 10vh;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -32,19 +31,15 @@ li a:hover {
 }
 
 .content {
-    position: absolute;
-    left: 0;
-    right: 10vh;
-    top: 10vh;
-    bottom: 0;
+    display: flex;
 }
 
 .clip {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 10vh;
+    flex: auto 0 1;
+}
+
+.controls {
+    flex: auto 0 1;
 }
 
 .controls button {
