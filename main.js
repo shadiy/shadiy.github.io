@@ -14,8 +14,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
         let month = date.getUTCMonth();
         let year = date.getUTCFullYear();
         let date_str = day + '-' + month + '-' + year;
-        clips = data[date_str];
-        console.log(data);
+        console.log(date_str);
+
+        let data_json = JSON.parse(data);
+        clips = data_json[date_str];
+        
+        console.log(data_json);
         console.log(clips);
         nextClip();
     }).catch((error) => {
@@ -24,7 +28,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 });
 
 function nextClip() {
-    //if (current_clip_slug_index >= clips.length) return;
+    if (current_clip_slug_index >= clips.length) return;
 
     current_clip_slug_index += 1;
     current_clip_slug = clips[current_clip_slug_index];
