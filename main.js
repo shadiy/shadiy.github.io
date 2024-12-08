@@ -20,5 +20,7 @@ function nextClip() {
     current_clip_slug_index += 1;
     current_clip_slug = clips[current_clip_slug_index];
 
-    document.querySelector('.clip').setAttribute('src', "https://clips.twitch.tv/embed?clip=" + current_clip_slug + "&parent=shadiy.github.io");
+    //document.querySelector('.clip').setAttribute('src', "https://clips.twitch.tv/embed?clip=" + current_clip_slug + "&parent=shadiy.github.io");
+    document.querySelector('.clip').setAttribute('src', "https://clips.twitch.tv/embed?clip=" + current_clip_slug + "&parent=127.0.0.1");
 }
+
