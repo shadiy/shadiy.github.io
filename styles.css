@@ -34,8 +34,8 @@ li a:hover {
 .content {
     position: absolute;
     left: 0;
-    right: 10%;
-    top: 10%;
+    right: 10vh;
+    top: 10vh;
     bottom: 0;
 }
 
@@ -44,7 +44,7 @@ li a:hover {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 10%;
+    bottom: 10vh;
 }
 
 .controls button {
