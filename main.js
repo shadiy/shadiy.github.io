@@ -1,5 +1,5 @@
 let current_clip_slug = "";
-let current_clip_slug_index = 0;
+let current_clip_slug_index = -1;
 let clips = "";
 
 document.addEventListener('DOMContentLoaded', (e) => {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         return res.json();
     }).then((data) => {
         clips = data['clips'];
-        current_clip_slug = clips[current_clip_slug_index];
+        nextClip();
     }).catch((error) => {
         console.error("Unable to fetch data:", error);
     });
