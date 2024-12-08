@@ -36,11 +36,6 @@ li a:hover {
     min-height: 90vh;
 }
 
-.clip {
-    min-width: 100%;
-    min-height: 90%;
-}
-
 .controls button {
     width: 20%;
     height: 10%;
