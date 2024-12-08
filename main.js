@@ -3,7 +3,7 @@ let current_clip_slug_index = -1;
 let clips = "";
 
 document.addEventListener('DOMContentLoaded', (e) => {
-    fetch('clips.json').then((res) => {
+    fetch('./clips.json').then((res) => {
         if (!res.ok) {
             throw new Error(`HTTP error! Status: ${res.status}`);
         }
