@@ -27,12 +27,17 @@ li a:hover {
     background-color: #111;
 }
 
+.content {
+    min-width: 100vh;
+    min-height: 90vh;
+}
+
 .clip {
-    min-width: 90vh;
-    min-height: 80vh;
+    min-width: 80vh;
+    min-height: 90vh;
 }
 
 .controls button {
     width: 20vh;
-    height: 5vh;
+    height: 3vh;
 }
