@@ -1,4 +1,4 @@
-let clips = "";
+let days = "";
 
 document.addEventListener('DOMContentLoaded', (e) => {
     fetch('./clips.json').then((res) => {
@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
         }
         return res.json();
     }).then((data) => {
-        clips = data['clips'];
-        nextClip();
+        days = data;
     }).catch((error) => {
         console.error("Unable to fetch data:", error);
     });
 
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < days.length; i++) {
+        let clips = days[i];
         let clip_slug = clips[i];
 
         let src = "https://clips.twitch.tv/embed?clip=" + clip_slug + "&parent=shadiy.github.io";

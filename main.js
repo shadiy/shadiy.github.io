@@ -9,7 +9,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
         }
         return res.json();
     }).then((data) => {
-        clips = data['clips'];
+        let date = new Date();
+        let day = date.getUTCDate();
+        let month = date.getUTCMonth();
+        let year = date.getUTCFullYear();
+        let date_str = day + '-' + month + '-' + year;
+        clips = data[date_str];
         nextClip();
     }).catch((error) => {
         console.error("Unable to fetch data:", error);
@@ -17,6 +22,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
 });
 
 function nextClip() {
+    if (current_clip_slug_index >= clips.length) return;
+
     current_clip_slug_index += 1;
     current_clip_slug = clips[current_clip_slug_index];
 
