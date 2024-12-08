@@ -1,6 +1,6 @@
 let current_clip_slug = "";
 let current_clip_slug_index = -1;
-let clips = "";
+let clips = [];
 
 document.addEventListener('DOMContentLoaded', (e) => {
     fetch('./clips.json').then((res) => {
