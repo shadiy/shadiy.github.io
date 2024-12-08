@@ -33,11 +33,11 @@ li a:hover {
 }
 
 .clip {
-    min-width: 80vh;
-    min-height: 90vh;
+    min-width: 80%;
+    min-height: 90%;
 }
 
 .controls button {
-    width: 20vh;
-    height: 3vh;
+    width: 20%;
+    height: 10%;
 }
