@@ -9,14 +9,16 @@
 </head>
 <body>
     <div class="topbar">
-        <a class="topbar-link" href="index.html">Random</a>
-        <a class="topbar-link" href="all-clips.html">All Clips</a>
+        <ul>
+            <li><<a class="topbar-link" href="index.html">Random</a></li>
+            <li><a class="topbar-link" href="all-clips.html">All Clips</a></li>
+        </ul>
     </div>
     <div class="content">
-        <iframe src="https://clips.twitch.tv/embed?clip=CarelessBlueGrasshopperFunRun-5lc9m0e6hq60v34Y&parent=127.0.0.1" height="500" width="90%" allowfullscreen></iframe>
+        <iframe src="https://clips.twitch.tv/embed?clip=CarelessBlueGrasshopperFunRun-5lc9m0e6hq60v34Y&parent=shadiy.github.io" height="60%" width="80%" allowfullscreen></iframe>
         <div class="controls">
             <button>Prev</button>
-            <button>Next</button>
+            <button onclick="nextClip()">Next</button>
         </div>
         <div class="timeline">
             <button>Test</button>
