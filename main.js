@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
         let year = date.getUTCFullYear();
         let date_str = day + '-' + month + '-' + year;
         clips = data[date_str];
+        console.log(data);
+        console.log(clips);
         nextClip();
     }).catch((error) => {
         console.error("Unable to fetch data:", error);
@@ -22,7 +24,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 });
 
 function nextClip() {
-    if (current_clip_slug_index >= clips.length) return;
+    //if (current_clip_slug_index >= clips.length) return;
 
     current_clip_slug_index += 1;
     current_clip_slug = clips[current_clip_slug_index];
