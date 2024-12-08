@@ -1,8 +1,12 @@
-body {
+body, html {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
 }
 
 ul {
+    height: 10vh;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -28,12 +32,12 @@ li a:hover {
 }
 
 .content {
-    min-width: 100vh;
+    min-width: 80vh;
     min-height: 90vh;
 }
 
 .clip {
-    min-width: 80%;
+    min-width: 100%;
     min-height: 90%;
 }
 
