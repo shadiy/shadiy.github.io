@@ -43,3 +43,8 @@ li a:hover {
     width: 20%;
     height: 10%;
 }
+
+
+.clips {
+    display: grid;
+}
