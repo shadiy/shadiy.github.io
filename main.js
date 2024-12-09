@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
 });
 
 function nextClip() {
-    if (current_clip_slug_index >= clips.length) {
-        document.querySelector('.clip').innerHTML = "No more clips today!\n Go to all clips to view previous days";
+    if (current_clip_slug_index == clips.length) {
+        document.querySelector('.clip-div').innerHTML = "No more clips today!\n Go to all clips to view previous days";
         return;
     }
 
